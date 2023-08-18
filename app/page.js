@@ -14,8 +14,6 @@ export default function Home() {
           <h1 className="pt-6 text-5xl md:text-7xl md:font-bold text-white mt-5 text-center">LVIS Hotels</h1>
 
         </div>
-
-
       </main>
     </PageRapper>
   );
