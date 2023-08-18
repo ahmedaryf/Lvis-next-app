@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ThemeToggle from './ThemeToggle'
 import Link from 'next/link'
 import {FaPagelines} from 'react-icons/fa'
@@ -73,9 +73,29 @@ const containerVars = {
 export default function Navbar() {
     const path = usePathname();
     const [isOpen, setIsOpen] = useState(false)
+    const ref = useRef(null)
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          ref.current.classList.add('bg-gradient-to-r', 'from-cyan-400', 'to-blue-600', 'dark:from-cyan-800', 'dark:to-blue-900');
+          console.log(window.scrollY);
+        } else {
+          ref.current.classList.remove('bg-gradient-to-r', 'from-cyan-300', 'to-blue-500', 'dark:from-cyan-800', 'dark:to-blue-900');
+        }
+      };
+  
+      // Attach the scroll event listener
+      window.addEventListener('scroll', handleScroll);
+  
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
   return (
     
-    <nav className=' bg-gradient-to-r from-cyan-300 to-blue-500 dark:from-cyan-600 dark:to-blue-800 px-4 py-3 flex justify-between items-center'>
+    <nav ref={ref} className=' bg-transparent duration-1000 px-4 py-3 flex justify-between items-center fixed w-screen z-50'>
         <div className='flex justify-between w-full items-center'>
             <Link href={'/'} className='text-xl'><FaPagelines size={60} /></Link>
             <ThemeToggle />
