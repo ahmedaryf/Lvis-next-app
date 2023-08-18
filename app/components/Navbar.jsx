@@ -7,6 +7,8 @@ import {GiHamburgerMenu} from  'react-icons/gi'
 import {MdClose} from  'react-icons/md'
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import Logo from '/public/logo.png';
 
 const navLinks = [
     {
@@ -97,7 +99,7 @@ export default function Navbar() {
     
     <nav ref={ref} className=' bg-transparent duration-1000 px-4 py-3 flex justify-between items-center fixed w-screen z-50'>
         <div className='flex justify-between w-full items-center'>
-            <Link href={'/'} className='text-xl'><FaPagelines size={60} /></Link>
+            <Link href={'/'} className='text-xl'><Image src={Logo} alt='Logo' width={50} height={50} /></Link>
             <ThemeToggle />
             {
               isOpen ? <MdClose color='white' onClick={() => setIsOpen(false)} size={32} className='block md:hidden' /> :  <GiHamburgerMenu color='white' onClick={() => setIsOpen(true)} size={32} className='block md:hidden' />
