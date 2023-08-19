@@ -6,7 +6,7 @@ export default function Home() {
     <PageRapper>
       <main className="min-h-screen bg-gradient-to-r from-cyan-300 to-blue-500 dark:from-cyan-800 dark:to-blue-900">
         <div className=" w-[100vw] overflow-hidden md:h-[90vh] relative">
-          <video autoPlay loop muted controls className="w-screen h-auto" >
+          <video autoPlay loop muted className="w-screen h-auto" >
             <source src={"https://res.cloudinary.com/db95xjjk2/video/upload/v1692417072/mantaWeb-m_c5uzzh.mp4"} />
           </video> 
           <div className=" bg-black/20 py-2 w-full absolute top-[75%] md:top-[85%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
