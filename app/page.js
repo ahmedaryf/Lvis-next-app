@@ -6,7 +6,7 @@ import ReactPlayer from 'react-player';
 
 
 export default function Home() {
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
 
   const handlePlay = () => {
     setPlaying(true);
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <PageRapper>
       <main className="min-h-screen bg-gradient-to-r from-cyan-300 to-blue-500 dark:from-cyan-800 dark:to-blue-900">
-        <div className=" w-screen overflow-hidden md:h-screen relative">
+        <div className=" w-screen overflow-hidden md:h-[80vh] relative">
 
          <ReactPlayer
             playing={playing}
