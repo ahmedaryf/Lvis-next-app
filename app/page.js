@@ -33,7 +33,7 @@ export default function Home() {
               playing={true}
               muted={true}
               loop={true}
-              url="/videos/hanifarubay-s.mp4"
+              url="https://res.cloudinary.com/db95xjjk2/video/upload/v1692536683/hanifarubay-s_dwaxr4.mp4"
               width="100%"
               height="auto"
               className="w-screen h-auto"
