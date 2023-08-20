@@ -25,15 +25,15 @@ export default function Home() {
   return (
     <PageRapper>
       <main className="min-h-screen bg-gradient-to-r from-cyan-300 to-blue-500 dark:from-cyan-800 dark:to-blue-900">
-        <div className="w-screen overflow-hidden md:h-[80vh] relative">
+        <div className="w-screen overflow-hidden md:h-[85vh] relative">
           {isMobile ? (
-            <Image src={picture} alt='Image' />
+            <Image src={picture} alt='Image' className='w-screen h-auto'/>
           ) : (
             <ReactPlayer
               playing={true}
               muted={true}
               loop={true}
-              url="https://res.cloudinary.com/db95xjjk2/video/upload/v1692417072/mantaWeb-m_c5uzzh.mp4"
+              url="/videos/hanifarubay-s.mp4"
               width="100%"
               height="auto"
               className="w-screen h-auto"
