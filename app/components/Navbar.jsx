@@ -23,10 +23,6 @@ const navLinks = [
         name: 'Contact',
         url: '/contact'
     },
-    {
-        name: 'Gallery',
-        url: '/gallery'
-    }
 ]
 
 const containerVars = {
