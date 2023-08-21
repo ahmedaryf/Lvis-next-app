@@ -55,7 +55,7 @@ const containerVars = {
       opacity: 1,
       transition: {
         ease: [0.12, 0, 0.39, 1],
-        duration: 1,
+        duration: .5,
       },
     },
   };
@@ -68,7 +68,7 @@ const containerVars = {
       y: 0, opacity: 1, scaleY: 1, scaleX: 1
     },
     exit: {
-      y: -500, opacity: 0, scaleY: 0, scaleX: 0, transition: {delay: .5, duration: .5}
+      y: -500, opacity: 0, scaleY: 0, scaleX: 0, transition: {delay: .4, duration: .2}
     }
   }
 
@@ -79,11 +79,11 @@ export default function Navbar() {
 
     useEffect(() => {
       const handleScroll = () => {
-        if (window.scrollY > 50) {
-          ref.current.classList.add('bg-gradient-to-r', 'from-cyan-400', 'to-blue-600', 'dark:from-cyan-800', 'dark:to-blue-900');
+        if (window.scrollY > 100) {
+          ref.current.classList.add('bg-gradient-to-r', 'from-black/10', 'to-black/20', 'dark:from-black/30', 'dark:to-black/60');
           console.log(window.scrollY);
         } else {
-          ref.current.classList.remove('bg-gradient-to-r', 'from-cyan-300', 'to-blue-500', 'dark:from-cyan-800', 'dark:to-blue-900');
+          ref.current.classList.remove('bg-gradient-to-r', 'from-black/10', 'to-black/20', 'dark:from-black/30', 'dark:to-black/60');
         }
       };
   
@@ -97,7 +97,7 @@ export default function Navbar() {
     }, []);
   return (
     
-    <nav ref={ref} className=' bg-transparent duration-1000 px-4 py-3 flex justify-between items-center fixed w-screen z-50'>
+    <nav ref={ref} className=' bg-transparent duration-1000 px-4 py-6 flex justify-between items-center fixed w-screen z-50'>
         <div className='flex justify-between w-full items-center'>
             <Link href={'/'} className='text-xl w-10 h-10'><Image priority src={Logo} alt='Logo' /></Link>
             <ThemeToggle />
@@ -130,10 +130,10 @@ export default function Navbar() {
           animate='animate'
           exit='exit'
           transition={{
-            duration: 0.5,
+            duration: 0.2,
             // ease: [0.12, 0, 0.39, 0],
           }}
-         className='block md:hidden absolute left-0 top-28 w-full bg-gradient-to-r from-cyan-300 to-blue-500 dark:from-cyan-600 dark:to-blue-800 min-h-[50vh] pt-5 z-50'>
+         className='block md:hidden absolute left-0 top-28 w-full bg-gradient-to-r from-cyan-300 to-blue-500 dark:from-cyan-800 dark:to-blue-900 min-h-[85vh] pt-5 z-50'>
          <motion.div
             variants={containerVars}
             initial="initial"
@@ -145,7 +145,7 @@ export default function Navbar() {
                     <div key={index} className="overflow-hidden pt-5">
                         <motion.h5
                             variants={linkVars}
-                            className='mx-4 py-4 text-center' key={index}><Link onClick={() => setIsOpen(false)} href={navItem.url} className='text-3xl text-white'>{navItem.name}</Link>
+                            className='mx-4 py-4 text-center' key={index}><Link onClick={() => setIsOpen(false)} href={navItem.url} className='text-3xl text-white [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)]'>{navItem.name}</Link>
                         </motion.h5>
                     </div>
                 )
@@ -161,3 +161,4 @@ export default function Navbar() {
     
   )
 }
+// color: #616164 #7E2E35  #DAB785

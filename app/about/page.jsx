@@ -22,7 +22,7 @@ export default function page() {
     <PageRapper>
       <div className='min-h-screen bg-gradient-to-r from-cyan-300 to-blue-500 dark:from-cyan-800 dark:to-blue-900'>
       <div className="h-32"></div>
-        <h1 className='pt-6 text-5xl text-center'>About</h1>
+        <h1 className='text-5xl md:text-8xl font-medium md:font-bold text-white text-center [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)]'>About us</h1>
         <div  className='grid grid-cols-2 gap-4 place-items-center mt-9'>
           {images.map((image, index) => {
             return (
