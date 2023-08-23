@@ -129,7 +129,7 @@ export default function Navbar() {
             duration: 0.2,
             // ease: [0.12, 0, 0.39, 0],
           }}
-         className='block md:hidden absolute left-0 top-28 w-full bg-gradient-to-r from-cyan-300 to-blue-500 dark:from-cyan-800 dark:to-blue-900 min-h-[85vh] pt-5 z-50'>
+         className='block md:hidden absolute left-0 top-28 w-full bg-gradient-to-b to-black from-[#616164] min-h-[85vh] pt-5 z-50'>
          <motion.div
             variants={containerVars}
             initial="initial"
