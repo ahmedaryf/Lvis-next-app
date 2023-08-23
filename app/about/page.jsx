@@ -19,10 +19,10 @@ const images = [
 
 export default function page() {
   return (
-    <main className='min-h-screen bg-gradient-to-r from-cyan-300 to-blue-500 dark:from-cyan-800 dark:to-blue-900'>
+    <main className='min-h-screen bg-gradient-to-r from-[#616164]/10 to-[#DAB785]/50  dark:from-slate-700 dark:to-slate-600'>
       <PageRapper>
         <div className="h-32"></div>
-          <h1 className='text-5xl md:text-8xl font-medium md:font-bold text-white text-center [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)]'>About us</h1>
+          <h1 className='text-5xl md:text-8xl font-medium md:font-bold text-[#7E2E35] dark:text-white text-center [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)]'>About us</h1>
           <div  className='grid grid-cols-2 gap-4 place-items-center mt-9'>
             {images.map((image, index) => {
               return (

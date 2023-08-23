@@ -77,7 +77,7 @@ export default function Navbar() {
       const handleScroll = () => {
         if (window.scrollY > 100) {
           ref.current.classList.add('bg-gradient-to-r', 'from-black/10', 'to-black/20', 'dark:from-black/30', 'dark:to-black/60');
-          console.log(window.scrollY);
+         
         } else {
           ref.current.classList.remove('bg-gradient-to-r', 'from-black/10', 'to-black/20', 'dark:from-black/30', 'dark:to-black/60');
         }

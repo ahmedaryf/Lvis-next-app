@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className='bg-gradient-to-r from-cyan-500 to-blue-600 dark:from-cyan-800 dark:to-blue-900 dark:to-blue-000 p-3 md:p-6'>
+    <footer className='bg-gradient-to-r from-[#616164]/10 to-[#DAB785]/50  dark:from-slate-600 dark:to-slate-900 p-3 md:p-6'>
         <div className='grid grid-cols-1 md:grid-cols-3 min-h-[10vh] text-gray-800 dark:text-white'>
             <div className=''>
                 <h5>Follow us</h5>
