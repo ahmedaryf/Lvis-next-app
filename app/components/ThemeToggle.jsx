@@ -6,7 +6,7 @@ import { BsFillSunFill } from "react-icons/bs";
 
 function ThemeToggle() {
     const [mounted, setMounted] = useState(false);
-    const { theme, setTheme } = useTheme('');
+    const { theme, setTheme } = useTheme('dark');
     
     // useEffect only runs on the client, so now we can safely show the UI
     useEffect(() => {

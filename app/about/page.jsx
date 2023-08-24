@@ -1,28 +1,49 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import PageRapper from '../components/PageRapper'
-import Ocean from '../../public/images/ocean-night1.jpg'
-import Mosque from '../../public/images/mosque-new.jpg'
+import Staff from '../../public/images/staff-lvis.jpg'
 import Image from 'next/image'
 import { motion } from "framer-motion";
 
 const images = [
   {
-    name: 'Mosque',
-    url: '/images/mosque-new.jpg'
+    name: 'Blancura',
+    url: '/images/blancura.jpg'
   },
   {
-    name: 'Ocean',
-    url: '/images/ocean-night1.jpg'
+    name: 'Village',
+    url: '/images/village.jpg'
   }
 ]
 
-export default function page() {
+export default function About() {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        // Update the isMobile state based on window width
+        const handleResize = () => {
+          setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+        };
+    
+        handleResize(); // Initial check
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+  
   return (
-    <main className='min-h-screen bg-gradient-to-r from-[#616164]/10 to-[#DAB785]/50  dark:from-slate-700 dark:to-slate-600'>
+    <main className='min-h-screen bg-gradient-to-r from-[#616164]/10 to-[#DAB785]/60  dark:from-slate-700 dark:to-slate-600'>
       <PageRapper>
-        <div className="h-32"></div>
-          <h1 className='text-5xl md:text-8xl font-medium md:font-bold text-[#7E2E35] dark:text-white text-center [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)]'>About us</h1>
+        <div className="relative">
+          <Image src={Staff} alt='LVIS Staff' />
+          <div className='flex flex-col items-center justify-end pb-8 absolute top-0 left-0 w-full h-full bg-slate-950/60'>
+
+          <h1 className='text-5xl md:text-9xl font-medium md:font-bold text-white text-center [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)]'>About us</h1>
+          </div>
+        </div>
           <div  className='grid grid-cols-2 gap-4 place-items-center mt-9'>
             {images.map((image, index) => {
               return (

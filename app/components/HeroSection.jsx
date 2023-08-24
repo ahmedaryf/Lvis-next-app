@@ -21,7 +21,7 @@ export default function HeroSection() {
       }, []);
     
   return (
-    <div className="w-screen overflow-hidden md:h-[85vh] relative ">
+    <div className="w-screen overflow-hidden md:h-[100vh] relative ">
     {isMobile ? (
       <Image src={picture} alt='Image' className='w-screen h-auto'/>
     ) : (
@@ -30,7 +30,7 @@ export default function HeroSection() {
 
 <div className="bg-black/30 py-2 w-full h-full absolute top-0">
   <div className=' flex flex-col justify-end items-center h-full pb-6'>
-    <h2 className="text-5xl md:text-8xl font-medium md:font-bold text-white text-center [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)] ">
+    <h2 className="text-5xl md:text-9xl font-medium md:font-bold text-white text-center [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)] ">
         LVIS Hotels
       </h2>
       <h1 className="text-center text-white md:text-2xl">

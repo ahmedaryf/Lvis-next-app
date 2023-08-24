@@ -125,16 +125,16 @@ export default function Navbar() {
             duration: 0.2,
             // ease: [0.12, 0, 0.39, 0],
           }}
-         className='block md:hidden absolute left-0 top-0 w-full bg-gradient-to-b to-black from-[#616164] min-h-[100vh] z-50 pt-10'>
+         className='block md:hidden absolute left-0 top-28 w-full bg-gradient-to-b to-black from-[#616164] min-h-[85vh] pt-5 z-50'>
          <motion.div
             variants={containerVars}
             initial="initial"
             animate="open"
             exit="initial">
-            <MdClose color='white' onClick={() => setIsOpen(false)} size={32} className='block md:hidden me-4 absolute right-0' />
+            
             {navLinks.map((navItem, index) => {
                 return (
-                    <div key={index} className="overflow-hidden pt-10 ">
+                    <div key={index} className="overflow-hidden pt-5">
                         <motion.h5
                             variants={linkVars}
                             className='mx-4 py-4 text-center' key={index}><Link onClick={() => setIsOpen(false)} href={navItem.url} className='text-3xl text-white [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)]'>{navItem.name}</Link>
