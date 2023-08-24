@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import hanifarubay from '../../public/images/manta.jpg'
-import ReactPlayer from 'react-player'
+import mantaPic from '../../public/images/mantaPic.jpg'
 
 
 export default function HanifarubayCard() {
@@ -23,7 +23,7 @@ export default function HanifarubayCard() {
   return (
     <div>
         {isMobile ? <Image src={hanifarubay} alt='Hanifaru bay image' /> : 
-            <ReactPlayer url='/videos/hanifarubay-s.mp4' playing={true} loop={true} muted={true} width={'100%'} height={'auto'} />
+        <Image src={mantaPic} alt='Hanifaru bay image' />
         }
         <div className='px-6 mb-0 md:mb-2'>
         <h5 className='text-5xl md:text-8xl mb-4 font-medium md:font-bold text-white text-center [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)] -m-14 md:-mt-24'>Hanifaru Bay</h5>
