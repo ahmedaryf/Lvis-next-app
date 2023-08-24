@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import PageRapper from '../components/PageRapper'
 import Staff from '../../public/images/staff-lvis.jpg'
+import StaffMobile from '../../public/images/staff-mobile.jpg'
 import Image from 'next/image'
 import { motion } from "framer-motion";
 
@@ -38,7 +39,10 @@ export default function About() {
     <main className='min-h-screen bg-gradient-to-r from-[#616164]/10 to-[#DAB785]/60  dark:from-slate-700 dark:to-slate-600'>
       <PageRapper>
         <div className="relative">
-          <Image src={Staff} alt='LVIS Staff' />
+          {!isMobile ? 
+            <Image src={Staff} alt='LVIS Staff' /> :
+            <Image src={StaffMobile} alt='LVIS Staff' />
+          }
           <div className='flex flex-col items-center justify-end pb-8 absolute top-0 left-0 w-full h-full bg-slate-950/60'>
 
           <h1 className='text-5xl md:text-9xl font-medium md:font-bold text-white text-center [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)]'>About us</h1>

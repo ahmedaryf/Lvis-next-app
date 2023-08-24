@@ -8,10 +8,10 @@ import Budget from '../../public/images/budget.jpg'
 export default function page() {
   return (
     <PageRapper>
-    <div className='h-80 md:h-[90vh] overflow-hidden relative w-screen bg-slate-100'>
+    <div className=' h-64 md:h-[90vh] overflow-hidden relative w-screen bg-slate-100'>
       <Image className='w-full h-auto absolute md:bottom-0' src={coverPhoto} alt='LVIS Blancura'/>
       <div className='bg-slate-900/30 absolute top-0 left-0 w-screen h-full'></div>
-      <div className='absolute left-[50%] top-[65%] md:top-[80%] translate-x-[-50%] translate-y-[-50%] w-screen'>
+      <div className='absolute left-[50%] top-[85%] md:top-[80%] translate-x-[-50%] translate-y-[-50%] w-screen'>
         <h1 className="text-5xl md:text-9xl font-medium md:font-bold text-white text-center [text-shadow:_4px_1px_2px_rgb(0_0_0_/_60%)]">LVIS Blancura</h1>
       </div>
     </div>
