@@ -1,5 +1,6 @@
 "use client"
 import Card from "./components/Card";
+import HanifarubayCard from "./components/HanifarubayCard";
 import HeroSection from "./components/HeroSection";
 import PageRapper from "./components/PageRapper";
 import blancura from '/public/images/blancura.jpg'
@@ -14,6 +15,9 @@ export default function Home() {
     <PageRapper>
       <div className="heroSection">
         <HeroSection />
+      </div>
+      <div>
+        <HanifarubayCard />
       </div>
 
       <div className="cards p-2 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
